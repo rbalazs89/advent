@@ -11,6 +11,7 @@ public class Forest {
 
     public static void main(String[] args) {
         List<String> forestLinesFromFile = readFile("src/mori.txt");
+        System.out.println(forestLinesFromFile.get(0));
         int[][] trees = new int[length][length];
         ArrayList<ATree> forest = new ArrayList<>();
 

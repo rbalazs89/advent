@@ -6,10 +6,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// a* algorithm
+// store steps in list as numbers in a map
+
 public class Main {
+
+    public static ValveMap valvemap = new ValveMap();
     public static void main(String[] args) {
         List<String> input = readFile("src/input.txt");
-        ValveMap valvemap = new ValveMap();
+        //ValveMap valvemap = new ValveMap();
 
         for (int i = 0; i < input.size(); i++) {
             String tempString = "";
@@ -44,10 +49,12 @@ public class Main {
         for (int i = 0; i < 9999999; i++) {
             resultList.add(findRandomRoute(30, valvemap.allValves.get(0), 0, openedValves));
         }
+
         System.out.println(Collections.max(resultList));
     }
 
     public static int findRandomRoute(int count, Valves valve1, int value, List<Valves> openedValves){
+
         if (count == 0) return value;
 
         List <Valves> currentOpenedValves = new ArrayList<>();
