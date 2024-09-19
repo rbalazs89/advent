@@ -84,6 +84,5 @@ public class JanKenPon {
             System.err.println("beep beep error");
             return new ArrayList<>();
         }
-
     }
 }
